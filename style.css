@@ -9,28 +9,28 @@
 
 @font-face {
     font-family: 'Tilda Sans';
-    src: url('src/main/resources/fonts/tildaSans_regular.ttf') format('truetype');
+    src: url('fonts/tildaSans_regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Tilda Sans';
-    src: url('src/main/resources/fonts/tildaSans_light.ttf') format('truetype');
+    src: url('fonts/tildaSans_light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Playfair Display';
-    src: url('src/main/resources/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+    src: url('fonts/PlayfairDisplay-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Playfair Display';
-    src: url('src/main/resources/fonts/PlayfairDisplay-SemiBold.ttf') format('truetype');
+    src: url('fonts/PlayfairDisplay-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -106,7 +106,7 @@ p { max-width: 60ch; }
 .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
 .address { margin: 2.5rem auto 0; text-align: center; }
 
-.photo-me { background-image: url("src/main/resources/images/me.jpg"); aspect-ratio: 4 / 5; width: 100%; max-width: 300px; margin-inline: auto; }
+.photo-me { background-image: url("images/me.jpg"); aspect-ratio: 4 / 5; width: 100%; max-width: 300px; margin-inline: auto; }
 
 #partner h2 { margin-bottom: 2.5rem; }
 .split { gap: 3rem; }
