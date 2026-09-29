@@ -80,7 +80,7 @@ p { max-width: 60ch; }
     padding-bottom: clamp(3rem, 10vw, 6rem);
     background:
             linear-gradient(rgba(15,35,25,.6), rgba(15,35,25,.6)),
-            url("src/main/resources/images/hero.jpg") center / cover,
+            url("images/hero.jpg") center / cover,
             var(--green);
 }
 .hero .wrap { text-align: center; }
@@ -89,7 +89,7 @@ p { max-width: 60ch; }
 
 .split { display: grid; gap: 2.5rem; align-items: center; }
 .photo { border-radius: 20px; background: var(--green-soft) center / cover; min-height: 320px; }
-.photo-me { background-image: url("src/main/resources/images/me.jpg"); aspect-ratio: 4 / 5; width: 100%; max-width: 300px; margin-inline: auto; }
+.photo-me { background-image: url("images/me.jpg"); aspect-ratio: 4 / 5; width: 100%; max-width: 300px; margin-inline: auto; }
 .video { position: relative; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; background: var(--green-deep); margin-bottom: 2rem; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
