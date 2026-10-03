@@ -3,93 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Green Leaf</title>
+    <title>Узлипат Гаджиева — партнёр GreenLeaf в Махачкале</title>
+    <meta name="description" content="Начните свой бизнес с Green Leaf: обучение, поддержка и пошаговый план даже без опыта и больших вложений.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- 1. ГЛАВНЫЙ ЭКРАН. Фото: images/hero.jpg -->
+<!-- 1. ГЛАВНЫЙ ЭКРАН. Фото: images/hero.jpg (сожмите до 200–300 КБ) -->
 <header class="hero" id="top">
-    <div class="wrap">
-        <h1>Добро пожаловать <br> в Green Leaf</h1> <br>
-        <a class="btn" href="#partner">Хочу узнать подробнее</a>
+    <div class="wrap hero-grid">
+        <div class="hero-text">
+            <p class="kicker">Партнёр GreenLeaf в Махачкале</p>
+            <h1>Начните своё дело вместе с GreenLeaf</h1>
+            <p class="hero-sub">Знания, инструменты и личное сопровождение. Даже без опыта и больших вложений.</p>
+            <div class="buttons">
+                <a class="btn" href="#contacts">Написать мне</a>
+                <a class="btn ghost" href="#partner">Узнать подробнее</a>
+            </div>
+        </div>
+        <img class="leaf" src="images/hero.jpg" alt="Продукция Green Leaf" width="800" height="900" fetchpriority="high" decoding="async">
     </div>
 </header>
 
 <!-- 2. Я ПАРТНЁР. Фото: images/me.jpg -->
 <section class="section" id="partner">
-    <div class="wrap">
-        <h2>Я партнёр Green Leaf</h2>
-        <div class="split">
-            <div class="photo photo-me" role="img" aria-label="Фото партнёра"></div>
-            <div class="about-text">
-                <p class="lead">Меня зовут Узлипат Гаджиева.</p>
-                <p>Я — официальный партнёр международной компании GreenLeaf в Махачкале.
-                    Помогаю людям начать бизнес с нуля, найти своё дело и выйти на стабильный
-                    заработок. Предлагаю не просто обучение, а полноценное сопровождение: даю
-                    знания и инструменты, адаптированные под наш регион, и пошаговый план даже
-                    без опыта и больших вложений..</p>
-                <img src="../../Downloads/landscape-shot-green-hills-val-d-orcia-tuscany-italy-gloomy-sky (1).jpg"
-                     height="3648" width="5472"/>
-                <p>Я не даю материал и не исчезаю — я рядом на всём пути, поддерживаю и
-                    помогаю преодолевать любые препятствия. Моя задача — чтобы вы чувствовали
-                    уверенность и видели результат. Если готовы начать — приглашаю к сотрудничеству.
-                </p>
-            </div>
+    <div class="wrap split">
+        <img class="me" src="images/me.jpg" alt="Узлипат Гаджиева" width="600" height="750" loading="lazy" decoding="async">
+        <div>
+            <h2>Меня зовут Узлипат Гаджиева</h2>
+            <p>Я официальный партнёр международной компании Green Leaf в Махачкале. Помогаю людям начать бизнес с нуля, найти своё дело и выйти на стабильный заработок.</p>
+            <p>Я даю не просто обучение, а полноценное сопровождение: знания и инструменты, адаптированные под наш регион, и пошаговый план.</p>
+            <p>Я не исчезаю после первой встречи. Я рядом на всём пути и помогаю преодолевать любые препятствия.</p>
+            <ul class="facts">
+                <li>Без опыта</li>
+                <li>Без больших вложений</li>
+                <li>С поддержкой на каждом шаге</li>
+            </ul>
         </div>
     </div>
 </section>
 
-<!-- 3. О КОМПАНИИ (видео 9:30) + 4 карточки -->
-<section class="section alt" id="about">
+<!-- 3. О КОМПАНИИ -->
+<section class="section dark" id="about">
     <div class="wrap">
         <h2>О компании</h2>
         <div class="video">
-            <iframe src="https://www.youtube.com/embed/ВАШ_ID_ВИДЕО_1" title="О компании Green Leaf" allowfullscreen loading="lazy"></iframe>
+            <!-- Rutube: «Поделиться» → «Код для вставки», возьмите ID из ссылки -->
+            <iframe src="https://rutube.ru/play/embed/b5ccb31e46e52f4839f4e04990910b84" title="О компании Green Leaf" allow="clipboard-write" allowfullscreen loading="lazy"></iframe>
         </div>
-        <div class="cards">
-            <article><h3>Стратегия</h3><p>Распространение высококачественной продукции по разумной цене на мировом рынке</p></article>
-            <article><h3>Миссия</h3><p>Сделать людей счастливее, здоровее, красивее и богаче.</p></article>
-            <article><h3>Ценности</h3><p>Гармония, альтруизм по отношению к себе, честность, преданность делу, полная отдача и инновация.</p></article>
-            <article><h3>Программа</h3><p>Стать лучшим работодателем на мировом уровне, крупнейшей платформой качественных продуктов.</p></article>
-        </div>
+        <dl class="values">
+            <div><dt>Стратегия</dt><dd>Распространение высококачественной продукции по разумной цене на мировом рынке.</dd></div>
+            <div><dt>Миссия</dt><dd>Сделать людей счастливее, здоровее, красивее и богаче.</dd></div>
+            <div><dt>Ценности</dt><dd>Гармония, альтруизм по отношению к себе, честность, преданность делу, полная отдача и инновация.</dd></div>
+            <div><dt>Программа</dt><dd>Стать лучшим работодателем на мировом уровне и крупнейшей платформой качественных продуктов.</dd></div>
+        </dl>
     </div>
 </section>
 
-<!-- 4. МАРКЕТИНГ (видео) -->
+<!-- 4. МАРКЕТИНГ -->
 <section class="section" id="marketing">
     <div class="wrap">
-        <h2>Маркетинг</h2>
-        <p class="lead">Просмотрев видео, вы познакомитесь с маркетингом GreenLeaf</p>
+        <h2>Маркетинг Green Leaf</h2>
+        <p>Посмотрите видео, и вы поймёте, как устроено сотрудничество и на чём строится заработок.</p>
         <div class="video">
-            <iframe src="https://www.youtube.com/embed/ВАШ_ID_ВИДЕО_2" title="Маркетинг Green Leaf" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://rutube.ru/play/embed/721f41c9efb2ab720c3b5dd59c041ca3" title="Маркетинг Green Leaf" allow="clipboard-write" allowfullscreen loading="lazy"></iframe>
         </div>
     </div>
 </section>
 
-<!-- 5. ПОДАРКИ И ПРОДУКЦИЯ. Фото: images/gifts-1.jpg ... gifts-3.jpg -->
-<!--<section class="section alt" id="gifts">
-    <div class="wrap">
-        <h2>Подарки и продукция</h2>
-        <p class="lead">Ваш текст о подарках и продукции.</p>
-        <div class="gallery">
-            <div class="photo g1" role="img" aria-label="Фото 1"></div>
-            <div class="photo g2" role="img" aria-label="Фото 2"></div>
-            <div class="photo g3" role="img" aria-label="Фото 3"></div>
-        </div>
-    </div>
-</section>-->
-
-<!-- 6. КОНТАКТЫ -->
+<!-- 5. КОНТАКТЫ -->
 <footer class="section contacts" id="contacts">
     <div class="wrap">
-        <h2>Контакты</h2>
+        <h2>Готовы начать? Напишите мне</h2>
+        <p>Отвечу на вопросы о продукции и сотрудничестве и расскажу, с чего начать.</p>
         <div class="buttons">
-            <a class="btn light" href="https://wa.me/79990000000" target="_blank" rel="noopener">Хочу попробовать в WhatsApp</a>
-            <a class="btn light" href="https://t.me/ваш_ник" target="_blank" rel="noopener">Хочу попробовать в Telegram</a>
+            <a class="btn" href="https://wa.me/79894401313" target="_blank" rel="noopener">Написать в WhatsApp</a>
+            <a class="btn ghost" href="https://t.me/ваш_ник" target="_blank" rel="noopener">Написать в Telegram</a>
         </div>
-        <p class="address"><strong>Сервисный центр:</strong>
-            Город, улица, дом, офис</p>
+        <p class="address"><strong>Сервисный центр:</strong> Имама Шамиля, 86А</p>
     </div>
 </footer>
 

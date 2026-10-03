@@ -1,137 +1,77 @@
 :root {
-    --green: #4D762A;
-    --green-deep: #224F10;
-    --green-soft: #DCE9DF;
-    --ivory: #EAFFD0;
-    --ivory-alt: #F1EFE3;
-    --ink: #1F2A24;
+    --forest: #1B3A1E;
+    --leaf: #4F7F2B;
+    --lime: #C8DC6B;
+    --mist: #EEF3E4;
+    --paper: #FAFBF6;
+    --ink: #1D2A1F;
 }
-
-@font-face {
-    font-family: 'Tilda Sans';
-    src: url('fonts/tildaSans_regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Tilda Sans';
-    src: url('fonts/tildaSans_light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('fonts/PlayfairDisplay-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('fonts/PlayfairDisplay-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
+@font-face { font-family: 'Tilda Sans'; src: url('fonts/tildaSans_regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Tilda Sans'; src: url('fonts/tildaSans_light.ttf') format('truetype'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'Playfair Display'; src: url('fonts/PlayfairDisplay-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Playfair Display'; src: url('fonts/PlayfairDisplay-SemiBold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
 * { box-sizing: border-box; margin: 0; }
 html { scroll-behavior: smooth; }
 body {
     font-family: "Tilda Sans", system-ui, sans-serif;
-    background: var(--ivory);
+    background: var(--paper);
     color: var(--ink);
-    line-height: 1.65;
+    line-height: 1.7;
     font-size: 1.05rem;
 }
-h1, h2, h3 {
-    font-family: "Playfair Display", Georgia, serif;
-    font-weight: 600;
-    line-height: 1.15;
-    color: var(--green-deep);
-    text-align: center;
-}
-h1 { font-size: clamp(2rem, 6vw, 4rem); max-width: 14ch; margin-inline: auto; color: var(--ivory); }
-h2 { font-size: clamp(1.6rem, 4.5vw, 2.8rem); margin-bottom: 1.25rem; }
-h3 { font-size: 1.2rem; margin-bottom: .5rem; }
-p { max-width: 60ch; }
-.lead { font-size: 1.2rem; margin-bottom: .75rem; }
-
+img { display: block; max-width: 100%; height: auto; }
+h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; line-height: 1.15; }
+h1 { font-size: clamp(2.2rem, 6vw, 4rem); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); margin-bottom: 1.25rem; }
+p { max-width: 62ch; margin-bottom: 1rem; }
 .wrap { width: min(1100px, 100% - 2.5rem); margin-inline: auto; }
-.section { padding: clamp(3.5rem, 9vw, 7rem) 0; }
-.alt { background: var(--ivory-alt); }
-
+.section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
+/* Кнопки */
+.buttons { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
 .btn {
-    display: inline-block; margin-top: 1.75rem;
-    padding: 1.25rem 2.5rem; border-radius: 999px;
-    font-size: 1.2rem;
-    background: var(--green); color: var(--ivory);
-    text-decoration: none;
-    transition: background .2s;
+    display: inline-block; padding: 1rem 2rem; border-radius: 999px;
+    background: var(--lime); color: var(--forest);
+    text-decoration: none; font-size: 1.1rem; font-weight: 400;
+    border: 2px solid var(--lime);
+    transition: background .2s, color .2s;
 }
-.btn:hover { background: var(--green-deep); }
-.btn:focus-visible { outline: 3px solid var(--ivory); outline-offset: 3px; }
-.btn.light { background: var(--ivory); color: var(--green-deep); }
-.btn.light:hover { background: var(--green-soft); }
-
-.hero {
-    min-height: 100svh; display: flex; align-items: flex-end;
-    padding-bottom: clamp(3rem, 10vw, 6rem);
-    background:
-            linear-gradient(rgba(15,35,25,.6), rgba(15,35,25,.6)),
-            url("images/hero.jpg") center / cover,
-            var(--green);
+.btn:hover { background: #fff; border-color: #fff; }
+.btn.ghost { background: transparent; color: inherit; border-color: currentColor; }
+.btn.ghost:hover { background: rgba(255, 255, 255, .15); }
+.btn:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
+/* Главный экран */
+.hero { background: var(--forest); color: var(--paper); padding: clamp(2.5rem, 7vw, 5rem) 0; min-height: 100svh; display: flex; align-items: center; }
+.hero-grid { display: grid; gap: 2.5rem; align-items: center; }
+.kicker { color: var(--lime); font-size: 1rem; margin-bottom: 1rem; }
+.hero h1 { margin-bottom: 1.25rem; }
+.hero-sub { font-size: 1.2rem; font-weight: 300; }
+.leaf {
+    width: 100%; max-width: 420px; aspect-ratio: 4 / 5; object-fit: cover;
+    margin-inline: auto; background: var(--leaf);
+    border-radius: 0 50% 0 50%; /* форма листа */
 }
-.hero .wrap { text-align: center; }
-
-#marketing .lead{text-align: center; margin-inline: auto; }
-
+/* Обо мне */
 .split { display: grid; gap: 2.5rem; align-items: center; }
-.photo { border-radius: 20px; background: var(--green-soft) center / cover; min-height: 320px; }
-.photo-me { background-image: url("images/me.jpg"); aspect-ratio: 4 / 5; width: 100%; max-width: 300px; margin-inline: auto; }
-.video { position: relative; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; background: var(--green-deep); margin-bottom: 2rem; }
+.me { width: 100%; max-width: 340px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 24px; background: var(--mist); margin-inline: auto; }
+.facts { list-style: none; padding: 0; margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .6rem; }
+.facts li { background: var(--mist); color: var(--forest); padding: .4rem 1rem; border-radius: 999px; font-size: .95rem; }
+/* О компании */
+.dark { background: var(--forest); color: var(--paper); }
+.video { position: relative; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; background: #0f2411; margin: 1.5rem 0 2.5rem; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-
-.cards { display: grid; gap: 1rem; grid-template-columns: 1fr; }
-.cards article { background: var(--ivory); border: 1px solid var(--green-soft); border-radius: 16px; padding: 1.5rem; }
-
-.gallery { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1.5rem; }
-.g1 { background-image: url("images/gifts-1.jpg"); }
-.g2 { background-image: url("images/gifts-2.jpg"); }
-.g3 { background-image: url("images/gifts-3.jpg"); }
-
-.contacts { background: var(--green-deep); color: var(--ivory); }
-.contacts h2 { color: var(--ivory); }
-.buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
-.address { margin: 2.5rem auto 0; text-align: center; }
-
-.photo-me { background-image: url("images/me.jpg"); aspect-ratio: 4 / 5; width: 100%; max-width: 300px; margin-inline: auto; }
-
-#partner h2 { margin-bottom: 2.5rem; }
-.split { gap: 3rem; }
-
-.about-text {
-    background: rgba(255, 255, 255, .55);
-    border-left: 5px solid var(--green);
-    border-radius: 20px;
-    padding: 2rem 2.25rem;
+.values div { display: grid; gap: .35rem; padding: 1.25rem 0; border-top: 1px solid rgba(250, 251, 246, .25); }
+.values dt { font-family: "Playfair Display", Georgia, serif; font-size: 1.4rem; color: var(--lime); }
+.values dd { margin: 0; max-width: 60ch; }
+/* Маркетинг */
+#marketing { background: var(--mist); }
+#marketing .video { margin-bottom: 0; }
+/* Контакты */
+.contacts { background: var(--leaf); color: #fff; }
+.contacts .btn:not(.ghost) { background: #fff; border-color: #fff; color: var(--forest); }
+.contacts .btn:not(.ghost):hover { background: var(--lime); border-color: var(--lime); }
+.address { margin-top: 2rem; margin-bottom: 0; }
+@media (min-width: 800px) {
+    .hero-grid { grid-template-columns: 1.2fr 1fr; }
+    .split { grid-template-columns: 340px 1fr; gap: 4rem; }
+    .values div { grid-template-columns: 220px 1fr; gap: 2rem; }
 }
-.about-text .lead {
-    font-family: "Playfair Display", Georgia, serif;
-    font-weight: 600;
-    font-size: 1.6rem;
-    color: var(--green-deep);
-    margin-bottom: 1rem;
-}
-.about-text p { max-width: none; margin-bottom: 1rem; }
-.about-text p:last-child { margin-bottom: 0; }
-
-@media (min-width: 720px) {
-                  .split { grid-template-columns: 300px 1fr; }
-                  .photo-me { order: -1; margin-inline: 0; }
-                  .cards { grid-template-columns: repeat(2, 1fr); }
-                  .gallery { grid-template-columns: 2fr 1fr; }
-                  .g1 { grid-row: span 2; min-height: 460px; }
-              }
-@media (min-width: 1000px) { .cards { grid-template-columns: repeat(4, 1fr); } }
