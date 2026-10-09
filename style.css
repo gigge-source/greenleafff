@@ -8,10 +8,8 @@
     --forest: #26421F;
     --lime: #C8DC6B;
 }
-
 @font-face { font-family: 'Tilda Sans'; src: url('fonts/tildaSans_regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
 @font-face { font-family: 'Tilda Sans'; src: url('fonts/tildaSans_light.ttf') format('truetype'); font-weight: 300; font-display: swap; }
-
 * { box-sizing: border-box; margin: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
@@ -27,10 +25,8 @@ h1, h2 { font-weight: 300; line-height: 1.15; letter-spacing: -.01em; }
 h1 { font-size: clamp(2.2rem, 11vw, 3.2rem); margin-bottom: 1rem; }
 h2 { font-size: clamp(1.9rem, 8vw, 2.4rem); margin-bottom: 1rem; }
 p { margin-bottom: 1rem; }
-
 .wrap { width: min(540px, 100% - 2rem); margin-inline: auto; }
 .section { padding: 2.5rem 0; }
-
 /* Кнопки */
 .buttons { display: flex; flex-direction: column; align-items: center; gap: .75rem; margin-top: 1.25rem; }
 .btn {
@@ -41,7 +37,6 @@ p { margin-bottom: 1rem; }
 .btn.ghost { background: transparent; color: inherit; border-color: currentColor; }
 .btn:active { opacity: .75; }
 a:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
-
 /* Главный экран: фото hero.jpg на весь экран */
 .hero { position: relative; min-height: 100svh; background: var(--forest); color: #fff; overflow: hidden; text-align: center; }
 .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(10, 25, 12, .45), rgba(10, 25, 12, .6)); }
@@ -58,35 +53,43 @@ a:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
 .kicker { margin-top: auto; font-size: .95rem; opacity: .85; margin-bottom: .75rem; }
 .hero-sub { font-size: 1.05rem; font-weight: 300; max-width: 30ch; }
 .hero .buttons { margin-bottom: auto; width: 100%; }
-
 /* Обо мне */
 .me { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 24px; background: var(--line); margin: 0 0 1.75rem; }
 #partner p { color: var(--muted); }
 .facts { list-style: none; padding: 0; margin-top: 1rem; }
 .facts li { padding: .9rem 0; border-bottom: 1px solid var(--line); }
 .facts li::before { content: "✓"; color: var(--forest); margin-right: .6rem; }
-
+/* Видео-карточки (работает и для .video, и для .vbox) */
+.video,
+.vbox {
+    position: relative; aspect-ratio: 16 / 9; border-radius: 24px; overflow: hidden;
+    background: #000; margin: 1.25rem 0 1.5rem;
+}
+.video iframe {
+    position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+}
+.video video,
+.vbox video {
+    position: absolute; inset: 0; width: 100%; height: 100%; max-width: none;
+    object-fit: contain; background: #000; border: 0;
+}
 /* О компании: карточки */
-.video { position: relative; aspect-ratio: 16 / 9; border-radius: 24px; overflow: hidden; background: var(--forest); margin: 1.25rem 0 1.5rem; }
-.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .mist { background: var(--soft); }
-.mist .video { margin-bottom: 0; }
+.mist .video,
+.mist .vbox { margin-bottom: 0; }
 .values { display: grid; gap: .75rem; }
 .values div { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 1.25rem; }
 .values dt { font-size: 1.3rem; margin-bottom: .35rem; }
 .values dd { margin: 0; color: var(--muted); }
 .values div:nth-child(2) { background: var(--forest); border-color: var(--forest); color: #fff; }
 .values div:nth-child(2) dd { color: rgba(255, 255, 255, .8); }
-
 /* Маркетинг */
 #marketing p { color: var(--muted); }
-
 /* Контакты: тёмный закруглённый блок */
 .contacts { background: none; color: inherit; }
 .contacts .wrap { background: var(--forest); color: #fff; border-radius: 28px; padding: 2rem 1.5rem; text-align: center; }
 .contacts p { color: rgba(255, 255, 255, .8); }
 .contacts .address { margin: 1.75rem 0 0; font-size: .95rem; }
-
 /* Нижняя плавающая кнопка */
 .sticky-wa {
     position: fixed; z-index: 10; left: 50%; right: auto; transform: translateX(-50%);
@@ -94,5 +97,4 @@ a:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
     padding: .9rem 1.75rem; border-radius: 999px; white-space: nowrap;
     background: var(--ink); color: #fff; text-decoration: none; box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
 }
-
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
