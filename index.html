@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<!-- 1. ГЛАВНЫЙ ЭКРАН. Фото: images/hero.jpg, логотип: images/logo.png -->
+<!-- 1. ГЛАВНЫЙ ЭКРАН -->
 <header class="hero" id="top">
     <div class="wrap">
         <img class="logo" src="images/logo.png" alt="GreenLeaf" width="150" height="45">
@@ -25,7 +25,7 @@
     </div>
 </header>
 
-<!-- 2. Я ПАРТНЁР. Фото: images/me.jpg -->
+<!-- 2. Я ПАРТНЁР -->
 <section class="section" id="partner">
     <div class="wrap">
         <img class="me" src="images/me.jpg" alt="Узлипат Гаджиева" width="600" height="750" loading="lazy" decoding="async">
@@ -42,11 +42,11 @@
 </section>
 
 <!-- 3. О КОМПАНИИ -->
-<section class="section dark" id="about">
+<section class="section" id="about">
     <div class="wrap">
         <h2>О компании</h2>
         <div class="vbox">
-            <video controls playsinline preload="metadata" poster="img/cover1.jpg">
+            <video controls playsinline preload="metadata" poster="images/cover1.jpg">
                 <source src="video/video1.mp4" type="video/mp4">
             </video>
         </div>
@@ -59,135 +59,17 @@
     </div>
 </section>
 
-<!-- 4. МАРКЕТИНГ -->
-<section class="section mist" id="marketing">
-    <div class="wrap">
-        <h2>Маркетинг GreenLeaf</h2>
-        <p>Посмотрите видео, и вы поймёте, как устроено сотрудничество и на чём строится заработок.</p>
-        <div class="vbox">
-            <video controls playsinline preload="metadata" poster="img/cover1.jpg">
-                <source src="video/video2.mp4" type="video/mp4">
-            </video>
-        </div>
-    </div>
-</section>
-
-<!-- 3.5. ПОДАРКИ И ПЛЮШКИ ПРИ ВСТУПЛЕНИИ В КОМАНДУ -->
-<section class="section gifts" id="gifts">
-    <div class="wrap">
-        <h2>Что вы получаете, вступая в команду</h2>
-        <p>Это не просто старт бизнеса — это старт с поддержкой и приятными бонусами.</p>
-        <ul class="gift-list">
-            <li>
-                <span class="gift-icon">🎁</span>
-                <div>
-                    <strong>Стартовый набор</strong>
-                    <p>Продукция и материалы для первого шага — уже включены.</p>
-                </div>
-            </li>
-            <li>
-                <span class="gift-icon">📚</span>
-                <div>
-                    <strong>Обучение и наставничество</strong>
-                    <p>Пошаговые уроки, разборы и личное сопровождение от меня.</p>
-                </div>
-            </li>
-            <li>
-                <span class="gift-icon">💬</span>
-                <div>
-                    <strong>Закрытый чат команды</strong>
-                    <p>Поддержка, обмен опытом и ответы на вопросы каждый день.</p>
-                </div>
-            </li>
-            <li>
-                <span class="gift-icon">🚀</span>
-                <div>
-                    <strong>Бонусы за активность</strong>
-                    <p>Подарки и премии за первые результаты и рост в команде.</p>
-                </div>
-            </li>
-            <li>
-                <span class="gift-icon">💚</span>
-                <div>
-                    <strong>Доступ к эксклюзивам</strong>
-                    <p>Специальные предложения и новинки — раньше остальных.</p>
-                </div>
-            </li>
-        </ul>
-        <div class="buttons">
-            <a class="btn" href="https://wa.me/79894401313" target="_blank" rel="noopener">Хочу в команду</a>
-        </div>
-    </div>
-</section>
-
-<!-- 3.6. СТАРТОВЫЕ НАБОРЫ -->
-<section class="section kits" id="kits">
-    <div class="wrap">
-        <h2>Стартовые наборы</h2>
-        <p class="section-lead">Выберите набор, который подходит именно вам. Состав может отличаться в зависимости от региона.</p>
-
-        <div class="kit-grid">
-
-            <!-- Набор 1 -->
-            <article class="kit-card">
-                <div class="kit-media">
-                    <img src="images/1.png" alt="Стартовый набор 1" loading="lazy" decoding="async">
-                </div>
-                <div class="kit-body">
-                    <h3>Набор 1</h3>
-                    <p class="kit-desc">Базовый старт: уход, гигиена и полезные мелочи для дома.</p>
-                    <button class="kit-btn" data-kit="1">Подробнее</button>
-                </div>
-            </article>
-
-            <!-- Набор 2 -->
-            <article class="kit-card">
-                <div class="kit-media">
-                    <img src="images/2.png" alt="Стартовый набор 2" loading="lazy" decoding="async">
-                </div>
-                <div class="kit-body">
-                    <h3>Набор 2</h3>
-                    <p class="kit-desc">Линейка с бифидодрожжами и товары для дома и ухода.</p>
-                    <button class="kit-btn" data-kit="2">Подробнее</button>
-                </div>
-            </article>
-
-            <!-- Набор 3 -->
-            <article class="kit-card">
-                <div class="kit-media">
-                    <img src="images/3.png" alt="Стартовый набор 3 — Фиолетовый" loading="lazy" decoding="async">
-                </div>
-                <div class="kit-body">
-                    <h3>Набор 3 — «Фиолетовый»</h3>
-                    <p class="kit-desc">Sealuxe Bifida Yeast — антивозрастной уход и товары для дома.</p>
-                    <button class="kit-btn" data-kit="3">Подробнее</button>
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-<!-- МОДАЛЬНОЕ ОКНО -->
-<div class="kit-modal" id="kitModal" aria-hidden="true">
-    <div class="kit-modal-overlay" data-close></div>
-    <div class="kit-modal-box" role="dialog" aria-modal="true">
-        <button class="kit-modal-close" data-close aria-label="Закрыть">&times;</button>
-        <h3 class="kit-modal-title" id="kitModalTitle"></h3>
-        <div class="kit-modal-content" id="kitModalContent"></div>
-        <a class="kit-btn kit-modal-cta" href="https://wa.me/79894401313" target="_blank" rel="noopener">Хочу этот набор</a>
-    </div>
-</div>
-
-<!-- 3.7. ЧТО ВЫ ПОЛУЧАЕТЕ СРАЗУ -->
+<!-- 4. ЧТО ВЫ ПОЛУЧАЕТЕ -->
 <section class="section perks" id="perks">
     <div class="wrap">
-        <h2>Что вы получаете сразу</h2>
+        <h2>Что вы получаете, вступая в команду</h2>
+        <p class="section-lead">Это не просто старт бизнеса — это старт с поддержкой и приятными бонусами.</p>
+
         <ul class="perk-list">
             <li>
                 <span class="perk-icon">🆔</span>
                 <div>
-                    <strong>Личный кабинет с вашим ID-номером</strong>
+                    <strong>Личный кабинет с ID-номером</strong>
                     <p>Доступ к системе, истории заказов и структуре.</p>
                 </div>
             </li>
@@ -208,8 +90,29 @@
             <li>
                 <span class="perk-icon">📚</span>
                 <div>
-                    <strong>Обучение</strong>
-                    <p>Видеоуроки, вебинары и стартовые школы от компании.</p>
+                    <strong>Обучение и наставничество</strong>
+                    <p>Видеоуроки, вебинары, стартовые школы и личное сопровождение.</p>
+                </div>
+            </li>
+            <li>
+                <span class="perk-icon">💬</span>
+                <div>
+                    <strong>Закрытый чат команды</strong>
+                    <p>Поддержка, обмен опытом и ответы на вопросы каждый день.</p>
+                </div>
+            </li>
+            <li>
+                <span class="perk-icon">🚀</span>
+                <div>
+                    <strong>Бонусы за активность</strong>
+                    <p>Подарки и премии за первые результаты и рост в команде.</p>
+                </div>
+            </li>
+            <li>
+                <span class="perk-icon">💚</span>
+                <div>
+                    <strong>Доступ к эксклюзивам</strong>
+                    <p>Специальные предложения и новинки — раньше остальных.</p>
                 </div>
             </li>
             <li>
@@ -220,37 +123,130 @@
                 </div>
             </li>
         </ul>
+
         <div class="buttons">
             <a class="btn" href="https://wa.me/79894401313" target="_blank" rel="noopener">Хочу в команду</a>
         </div>
     </div>
 </section>
 
-<!-- 5. КОНТАКТЫ -->
+<!-- 5. СТАРТОВЫЕ НАБОРЫ -->
+<section class="section kits" id="kits">
+    <div class="wrap">
+        <h2>Стартовые наборы</h2>
+        <p class="section-lead">Выберите набор, который подходит именно вам. Состав может отличаться в зависимости от региона.</p>
+
+        <div class="kit-grid">
+
+            <!-- Набор 1 -->
+            <article class="kit-card">
+                <div class="kit-media">
+                    <img src="images/3.png" alt="Стартовый набор «Стакан»" loading="lazy" decoding="async">
+                </div>
+                <div class="kit-body">
+                    <h3>Набор «Стакан»</h3>
+                    <p class="kit-desc">Щелочной стакан: уход, гигиена и полезные мелочи для дома.</p>
+                    <button class="kit-btn" data-kit="1">Подробнее</button>
+                </div>
+            </article>
+
+            <!-- Набор 2 -->
+            <article class="kit-card">
+                <div class="kit-media">
+                    <img src="images/1.png" alt="Стартовый набор «Бежевый»" loading="lazy" decoding="async">
+                </div>
+                <div class="kit-body">
+                    <h3>Набор «Бежевый»</h3>
+                    <p class="kit-desc">Линейка с бифидодрожжами и товары для дома и ухода.</p>
+                    <button class="kit-btn" data-kit="2">Подробнее</button>
+                </div>
+            </article>
+
+            <!-- Набор 3 -->
+            <article class="kit-card">
+                <div class="kit-media">
+                    <img src="images/2.png" alt="Стартовый набор «Фиолетовый»" loading="lazy" decoding="async">
+                </div>
+                <div class="kit-body">
+                    <h3>Набор «Фиолетовый»</h3>
+                    <p class="kit-desc">Sealuxe Bifida Yeast — антивозрастной уход и товары для дома.</p>
+                    <button class="kit-btn" data-kit="3">Подробнее</button>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- 6. МАРКЕТИНГ -->
+<section class="section marketing" id="marketing">
+    <div class="wrap">
+        <h2>Маркетинг GreenLeaf</h2>
+        <p>Посмотрите видео, и вы поймёте, как устроено сотрудничество и на чём строится заработок.</p>
+        <div class="vbox">
+            <video controls playsinline preload="metadata" poster="images/cover1.jpg">
+                <source src="video/video2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+
+<!-- 7. КОНТАКТЫ -->
 <footer class="section contacts" id="contacts">
     <div class="wrap">
         <h2>Готовы начать? Напишите мне</h2>
         <p>Отвечу на вопросы о продукции и сотрудничестве и расскажу, с чего начать.</p>
-        <div class="buttons">
-            <a class="btn" href="https://wa.me/79894401313" target="_blank" rel="noopener">Написать в WhatsApp</a>
-            <a class="btn ghost" href="https://t.me/uzyaaa" target="_blank" rel="noopener">Написать в Telegram</a>
+
+        <div class="contacts-buttons">
+            <a class="btn" href="https://wa.me/79894401313" target="_blank" rel="noopener">
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.82 2.42a8.2 8.2 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm-3.6 4.4c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.13.17 1.78 2.72 4.32 3.81.6.26 1.08.42 1.45.54.61.19 1.16.16 1.6.1.49-.07 1.5-.61 1.71-1.2.21-.59.21-1.1.15-1.2-.06-.11-.23-.17-.48-.29-.25-.13-1.5-.74-1.73-.83-.23-.08-.4-.12-.57.13-.17.25-.65.83-.8 1-.15.17-.3.19-.55.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.55-1.34-.76-1.84-.2-.48-.4-.42-.55-.43h-.47z"/>
+                </svg>
+                WhatsApp
+            </a>
+
+            <a class="btn ghost" href="https://t.me/uzya_greenleaf" target="_blank" rel="noopener">
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21.94 4.3 18.7 19.6c-.24 1.08-.88 1.35-1.78.84l-4.92-3.63-2.37 2.28c-.26.26-.48.48-.98.48l.35-5 9.1-8.22c.4-.35-.08-.55-.6-.2L5.75 13.1l-4.85-1.52c-1.05-.33-1.07-1.05.22-1.55L20.5 2.86c.88-.32 1.65.2 1.44 1.44z"/>
+                </svg>
+                Telegram
+            </a>
+
+            <a class="btn ghost" href="https://instagram.com/greanleaf_mhkl" target="_blank" rel="noopener">
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.19.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.42-.35 1.04-.4 2.19-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.4 2.19.22.55.47.94.88 1.35.41.41.8.66 1.35.88.42.16 1.04.35 2.19.4 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.19-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.42.35-1.04.4-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.4-2.19a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.42-.16-1.04-.35-2.19-.4-1.24-.06-1.61-.07-4.76-.07zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92zm0 1.62a3.84 3.84 0 1 0 0 7.68 3.84 3.84 0 0 0 0-7.68zm5.68-2.88a1.28 1.28 0 1 1 0 2.56 1.28 1.28 0 0 1 0-2.56z"/>
+                </svg>
+                Instagram
+            </a>
+
+            <a class="btn ghost" href="https://t.me/greanleaf_family_mhk" target="_blank" rel="noopener">
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.5 3.5 3.7 10.2c-1.1.43-1.08 1.52.02 1.86l4.4 1.37 1.7 5.2c.22.65.9.83 1.4.32l2.4-2.35 4.6 3.38c.7.5 1.5.14 1.72-.75l2.9-12.5c.28-1.2-.5-1.9-1.34-1.53zM9.6 13.2l8.2-5.2-6.5 5.9-.3 3.1-1.4-3.8z"/>
+                </svg>
+                Telegram-канал
+            </a>
         </div>
-        <p class ="address"><strong>Сервисный центр:</strong> город Махачкала, улица Имама Шамиля 86 А</p>
+
+        <p class="address"><strong>Сервисный центр:</strong> город Махачкала, улица Имама Шамиля 86 А</p>
     </div>
 </footer>
 
-<!-- Нижняя кнопка, всегда под пальцем -->
-<!--
-<a class="sticky-wa" href="https://wa.me/79894401313" target="_blank" rel="noopener">Написать в WhatsApp</a>
--->
-
-</body>
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div class="kit-modal" id="kitModal" aria-hidden="true">
+    <div class="kit-modal-overlay" data-close></div>
+    <div class="kit-modal-box" role="dialog" aria-modal="true">
+        <button class="kit-modal-close" data-close aria-label="Закрыть">&times;</button>
+        <h3 class="kit-modal-title" id="kitModalTitle"></h3>
+        <div class="kit-modal-content" id="kitModalContent"></div>
+        <a class="kit-btn kit-modal-cta" href="https://wa.me/79894401313" target="_blank" rel="noopener">Хочу этот набор</a>
+    </div>
+</div>
 
 <script>
     (function () {
         const kits = {
             "1": {
-                title: "Набор 1",
+                title: "Набор «Стакан»",
                 sub: "Базовый старт",
                 items: [
                     "Металлический стакан в подарочной коробке",
@@ -262,7 +258,7 @@
                 ]
             },
             "2": {
-                title: "Набор 2",
+                title: "Набор «Бежевый»",
                 sub: "Уход и дом",
                 items: [
                     "Линейка с бифидодрожжами: пенка для умывания, тоник, эмульсия, сыворотка с дозатором",
@@ -274,7 +270,7 @@
                 ]
             },
             "3": {
-                title: "Набор 3 — «Фиолетовый»",
+                title: "Набор «Фиолетовый»",
                 sub: "Sealuxe Bifida Yeast, антивозрастной уход",
                 items: [
                     "Линейка с бифидодрожжами: пенка для умывания, тоник, эмульсия, сыворотка с дозатором",
@@ -322,4 +318,6 @@
         });
     })();
 </script>
+
+</body>
 </html>
