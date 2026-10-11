@@ -121,7 +121,6 @@
 </section>
 
 <!-- 3.6. СТАРТОВЫЕ НАБОРЫ -->
-<!-- 3.6. СТАРТОВЫЕ НАБОРЫ -->
 <section class="section kits" id="kits">
     <div class="wrap">
         <h2>Стартовые наборы</h2>
@@ -136,14 +135,8 @@
                 </div>
                 <div class="kit-body">
                     <h3>Набор 1</h3>
-                    <ul>
-                        <li>Металлический стакан в подарочной коробке</li>
-                        <li>Шампунь Greenleaf Refreshing с растительными экстрактами</li>
-                        <li>Две зубные пасты iLife с морскими водорослями</li>
-                        <li>Три зубные щётки Carich с мягкой щетиной</li>
-                        <li>Ночные прокладки, 8 шт.</li>
-                        <li>Рулон универсальных салфеток</li>
-                    </ul>
+                    <p class="kit-desc">Базовый старт: уход, гигиена и полезные мелочи для дома.</p>
+                    <button class="kit-btn" data-kit="1">Подробнее</button>
                 </div>
             </article>
 
@@ -154,14 +147,8 @@
                 </div>
                 <div class="kit-body">
                     <h3>Набор 2</h3>
-                    <ul>
-                        <li>Линейка с бифидодрожжами: пенка для умывания, тоник, эмульсия, сыворотка с дозатором</li>
-                        <li>Три баночки и три тюбика в мини-формате</li>
-                        <li>iLife: средство для стирки и для мытья посуды, по 1 кг</li>
-                        <li>Бамбуковые салфетки</li>
-                        <li>Зубная паста iLife</li>
-                        <li>Прокладки</li>
-                    </ul>
+                    <p class="kit-desc">Линейка с бифидодрожжами и товары для дома и ухода.</p>
+                    <button class="kit-btn" data-kit="2">Подробнее</button>
                 </div>
             </article>
 
@@ -172,19 +159,25 @@
                 </div>
                 <div class="kit-body">
                     <h3>Набор 3 — «Фиолетовый»</h3>
-                    <p class="kit-sub">Sealuxe Bifida Yeast, антивозрастной уход</p>
-                    <ul>
-                        <li>Линейка с бифидодрожжами: пенка для умывания, тоник, эмульсия, сыворотка с дозатором</li>
-                        <li>Три баночки и три тюбика в мини-формате</li>
-                        <li>iLife: средство для стирки и для мытья посуды, по 1 кг</li>
-                        <li>Бамбуковые салфетки, зубная паста iLife, прокладки</li>
-                    </ul>
+                    <p class="kit-desc">Sealuxe Bifida Yeast — антивозрастной уход и товары для дома.</p>
+                    <button class="kit-btn" data-kit="3">Подробнее</button>
                 </div>
             </article>
 
         </div>
     </div>
 </section>
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div class="kit-modal" id="kitModal" aria-hidden="true">
+    <div class="kit-modal-overlay" data-close></div>
+    <div class="kit-modal-box" role="dialog" aria-modal="true">
+        <button class="kit-modal-close" data-close aria-label="Закрыть">&times;</button>
+        <h3 class="kit-modal-title" id="kitModalTitle"></h3>
+        <div class="kit-modal-content" id="kitModalContent"></div>
+        <a class="kit-btn kit-modal-cta" href="https://wa.me/79894401313" target="_blank" rel="noopener">Хочу этот набор</a>
+    </div>
+</div>
 
 <!-- 3.7. ЧТО ВЫ ПОЛУЧАЕТЕ СРАЗУ -->
 <section class="section perks" id="perks">
@@ -252,4 +245,81 @@
 -->
 
 </body>
+
+<script>
+    (function () {
+        const kits = {
+            "1": {
+                title: "Набор 1",
+                sub: "Базовый старт",
+                items: [
+                    "Металлический стакан в подарочной коробке",
+                    "Шампунь Greenleaf Refreshing с растительными экстрактами",
+                    "Две зубные пасты iLife с морскими водорослями",
+                    "Три зубные щётки Carich с мягкой щетиной",
+                    "Ночные прокладки, 8 шт.",
+                    "Рулон универсальных салфеток"
+                ]
+            },
+            "2": {
+                title: "Набор 2",
+                sub: "Уход и дом",
+                items: [
+                    "Линейка с бифидодрожжами: пенка для умывания, тоник, эмульсия, сыворотка с дозатором",
+                    "Три баночки и три тюбика в мини-формате",
+                    "iLife: средство для стирки и для мытья посуды, по 1 кг",
+                    "Бамбуковые салфетки",
+                    "Зубная паста iLife",
+                    "Прокладки"
+                ]
+            },
+            "3": {
+                title: "Набор 3 — «Фиолетовый»",
+                sub: "Sealuxe Bifida Yeast, антивозрастной уход",
+                items: [
+                    "Линейка с бифидодрожжами: пенка для умывания, тоник, эмульсия, сыворотка с дозатором",
+                    "Три баночки и три тюбика в мини-формате",
+                    "iLife: средство для стирки и для мытья посуды, по 1 кг",
+                    "Бамбуковые салфетки, зубная паста iLife, прокладки"
+                ]
+            }
+        };
+
+        const modal = document.getElementById("kitModal");
+        const titleEl = document.getElementById("kitModalTitle");
+        const contentEl = document.getElementById("kitModalContent");
+
+        function openKit(id) {
+            const kit = kits[id];
+            if (!kit) return;
+            titleEl.textContent = kit.title;
+            contentEl.innerHTML =
+                '<p class="kit-modal-sub">' + kit.sub + '</p>' +
+                '<ul>' + kit.items.map(function (i) { return '<li>' + i + '</li>'; }).join('') + '</ul>';
+            modal.classList.add("is-open");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.classList.add("kit-modal-open");
+        }
+
+        function closeKit() {
+            modal.classList.remove("is-open");
+            modal.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("kit-modal-open");
+        }
+
+        document.querySelectorAll(".kit-btn[data-kit]").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                openKit(btn.getAttribute("data-kit"));
+            });
+        });
+
+        modal.querySelectorAll("[data-close]").forEach(function (el) {
+            el.addEventListener("click", closeKit);
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") closeKit();
+        });
+    })();
+</script>
 </html>
